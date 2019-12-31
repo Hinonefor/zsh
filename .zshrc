@@ -135,12 +135,23 @@ alias lg='lazygit'
 alias ms='mailsync'
 alias mt='neomutt'
 alias nv='nvim'
+alias r='echo $RANGER_LEVEL'
 alias ra='ranger'
+# ra() {
+	#if [ -z "$RANGER_LEVEL" ]
+	#then
+		#ranger
+	#else
+		#exit
+	#fi
+#}
 alias s='neofetch'
 alias sra='sudo -E ranger'
 alias sudo='sudo -E'
 alias vim='nvim'
 alias gs='git config credential.helper store'
+alias bat='sudo tlp bat'
+alias ac='sudo tlp ac'
 
 #function zle-line-init zle-keymap-select {
 	#RPS1="${${KEYMAP/vicmd/-- NOR --}/(main|viins)/-- INS --}"
@@ -187,8 +198,8 @@ export LC_CTYPE=zh_CN.UTF-8
 export LANG="en_US.UTF-8" 
 export LC_ALL="zh_CN.UTF-8" 
 
-export DISPLAY=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`:0
-export PULSE_SERVER=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+#export DISPLAY=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`:0
+#export PULSE_SERVER=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
 
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
@@ -198,8 +209,8 @@ export EDITOR=nvim
 
 [[ -z $DISPLAY && $XDG_VTNR -eq 1  ]] && exec startx
 
-export DOTNET_ROOT="/opt/dotnet"
+#export DOTNET_ROOT="/opt/dotnet"
 
-genie -s
+#genie -s
 
 clear
